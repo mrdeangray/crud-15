@@ -1,0 +1,31 @@
+.delete{
+    background-color: rgba(0, 0, 0, 0.226);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60px repeat(3, 1fr) 60px;
+    grid-template-rows: 60px repeat(3, 1fr) 60px;
+}
+.delete .header{
+    background-color: rgb(0, 0, 0);
+    grid-column: 5 span;
+}
+.delete .left{
+    background-color: green;
+    grid-column: span 1;
+    grid-row: span 3;
+}
+.delete .main{
+    /* background-color: red; */
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.delete .right{
+    background-color: green;
+    grid-column: span 1;
+    grid-row: span 3;
+}
+.delete .footer{
+    background-color: black;
+    grid-column: 5 span;
+}

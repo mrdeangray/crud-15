@@ -1,0 +1,46 @@
+
+.read-stocks{
+    background-color: rgba(128, 128, 128, 0.5);
+    height: 100vh;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 80px repeat(3, 1fr) 80px;
+    grid-template-rows: 60px repeat(3, 1fr) 60px;
+    
+}
+.read-stocks >* {
+    border: 1px solid black;
+}
+.header{
+    background-color: black;
+    color: white;
+    grid-column: span 5;
+}
+
+.left{
+    background-color: rgb(3, 63, 9);
+    color: white;
+    grid-column: span 1;
+    grid-row: span 3;
+    
+}
+.main{
+    background-color: rgba(99, 99, 99, 0.134);
+    color: white;
+    grid-column: span 3;
+    grid-row: span 3;
+    
+}
+.right{
+    background-color: rgb(3, 63, 9);
+    color: white;
+    grid-column: span 1;
+    grid-row: span 3;
+    
+}
+
+.footer{
+    background-color: rgb(127, 127, 127);
+    color: white;
+    grid-column: span 5;
+}
