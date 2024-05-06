@@ -26,13 +26,24 @@ const Weather = () => {
   };
 
   const successCallback = async (position) => {
-    const { coords: coordinates } = position;
-    setCoordinates(coordinates);
-    getCityFromCoordinates(coordinates.latitude, coordinates.longitude, 1);
+    try {
+      const { coords } = position;
+      setCoordinates(coords);
+      const limit = 1;
+      const { data } = await axios(
+        `http://api.openweathermap.org/geo/1.0/reverse?lat=${coords.latitude}&lon=${coords.longitude}&limit=${limit}&appid=${API_key}`
+      );
+      setCurrLocation(data[0]);
+      setIsLoading(false);
+    } catch (error) {
+      setErrMsg(error);
+      console.log(error);
+    }
   };
 
   const errorCallback = (error) => {
     console.log("failure");
+    console.log(error);
     setErrMsg(error);
   };
 
