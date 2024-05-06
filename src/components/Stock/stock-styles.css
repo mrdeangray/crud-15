@@ -1,0 +1,22 @@
+.stock{
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: black;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* justify-content: center; */
+   
+
+    
+}
+.stock >*{
+    border: 1px solid blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,12 +5,14 @@ import CreateStock from "./components/CreateStock";
 import UpdateStock from "./components/UpdateStock";
 import DeleteStock from "./components/DeleteStock";
 import StockProvider from "./context/StockProvider";
+import Weather from "./components/Weather";
 
 function App() {
   return (
     <div className="App">
       <StockProvider>
         <Routes>
+          <Route exact path="/weather" element={<Weather />} />
           <Route exact path="/" element={<ReadStocks />} />
           <Route exact path="/create" element={<CreateStock />} />
           <Route exact path="/update/:id" element={<UpdateStock />} />

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./stock-styles.css"
 
 const Stock = ({ stock }) => {
   const [score, setScore] = useState(0);
@@ -20,7 +21,7 @@ const Stock = ({ stock }) => {
   };
 
   return (
-    <div>
+    <div className="stock">
       <span>{stock.name}</span>
       <span>Score: {score}</span>
       <Link to={`/update/${stock.id}`}>Update</Link>

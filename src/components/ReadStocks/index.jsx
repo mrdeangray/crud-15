@@ -19,6 +19,9 @@ const ReadStocks = () => {
         <Link to={`/create`}>
           <button>Create Stock</button>
         </Link>
+        <Link to={`/weather`}>
+          <button>Weather</button>
+        </Link>
       </div>
       <div className="right"></div>
       <div className="footer"></div>
